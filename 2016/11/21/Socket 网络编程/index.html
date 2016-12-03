@@ -84,55 +84,16 @@
 
 
 
-<meta name="description" content="Network Extension 实现私有 VPN 协议目录
-申请 entitlements；
-写代码；
-
-申请 entitlements
-向 Apple 申请 Network Extension 的 entitlements；
-配置 entitlements
-注意事项（保证应用和 Extension 有同样的 entitlements）；
-
-写代码
-客户端代码
-服务端代码
-
-参考文献Debug">
+<meta name="description" content="Socket 是什么 ？1、 socket套接字：     socket起源于Unix，而Unix/Linux基本哲学之一就是“一切皆文件”，都可以用“打开open –&amp;gt; 读写write/read –&amp;gt; 关闭close”模式来操作。Socket就是该模式的一个实现，        socket即是一种特殊的文件，一些socket函数就是对其进行的操作（读/写IO、打开、关闭）.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Network Extension 实现私有 VPN 协议">
-<meta property="og:url" content="http://yoursite.com/2016/02/27/2016-02-28-Network Extension 实现私有 VPN 协议/index.html">
+<meta property="og:title" content="Socket 网络编程">
+<meta property="og:url" content="http://yoursite.com/2016/11/21/Socket 网络编程/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Network Extension 实现私有 VPN 协议目录
-申请 entitlements；
-写代码；
-
-申请 entitlements
-向 Apple 申请 Network Extension 的 entitlements；
-配置 entitlements
-注意事项（保证应用和 Extension 有同样的 entitlements）；
-
-写代码
-客户端代码
-服务端代码
-
-参考文献Debug">
-<meta property="og:updated_time" content="2016-03-17T11:47:55.000Z">
+<meta property="og:description" content="Socket 是什么 ？1、 socket套接字：     socket起源于Unix，而Unix/Linux基本哲学之一就是“一切皆文件”，都可以用“打开open –&amp;gt; 读写write/read –&amp;gt; 关闭close”模式来操作。Socket就是该模式的一个实现，        socket即是一种特殊的文件，一些socket函数就是对其进行的操作（读/写IO、打开、关闭）.">
+<meta property="og:updated_time" content="2016-12-03T06:46:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Network Extension 实现私有 VPN 协议">
-<meta name="twitter:description" content="Network Extension 实现私有 VPN 协议目录
-申请 entitlements；
-写代码；
-
-申请 entitlements
-向 Apple 申请 Network Extension 的 entitlements；
-配置 entitlements
-注意事项（保证应用和 Extension 有同样的 entitlements）；
-
-写代码
-客户端代码
-服务端代码
-
-参考文献Debug">
+<meta name="twitter:title" content="Socket 网络编程">
+<meta name="twitter:description" content="Socket 是什么 ？1、 socket套接字：     socket起源于Unix，而Unix/Linux基本哲学之一就是“一切皆文件”，都可以用“打开open –&amp;gt; 读写write/read –&amp;gt; 关闭close”模式来操作。Socket就是该模式的一个实现，        socket即是一种特殊的文件，一些socket函数就是对其进行的操作（读/写IO、打开、关闭）.">
 
 
 
@@ -160,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/02/27/2016-02-28-Network Extension 实现私有 VPN 协议/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/21/Socket 网络编程/"/>
 
 
 
 
 
-  <title> Network Extension 实现私有 VPN 协议 | Hexo </title>
+  <title> Socket 网络编程 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -224,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -234,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -277,7 +238,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/27/2016-02-28-Network Extension 实现私有 VPN 协议/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/21/Socket 网络编程/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="John Doe">
@@ -301,7 +262,7 @@
             
             
               
-                Network Extension 实现私有 VPN 协议
+                Socket 网络编程
               
             
           </h1>
@@ -313,9 +274,9 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-27T17:34:08+08:00">
-                2016-02-27
+              <span class="post-meta-item-text">Posté le</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-21T09:10:08+08:00">
+                2016-11-21
               </time>
             
 
@@ -330,7 +291,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
@@ -368,20 +329,24 @@
       
 
       
-        <h1 id="Network-Extension-实现私有-VPN-协议"><a href="#Network-Extension-实现私有-VPN-协议" class="headerlink" title="Network Extension 实现私有 VPN 协议"></a>Network Extension 实现私有 VPN 协议</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
-<li>申请 entitlements；</li>
-<li>写代码；</li>
-</ol>
-<h2 id="申请-entitlements"><a href="#申请-entitlements" class="headerlink" title="申请 entitlements"></a>申请 entitlements</h2><ol>
-<li>向 Apple 申请 Network Extension 的 entitlements；</li>
-<li>配置 entitlements</li>
-<li>注意事项（保证应用和 Extension 有同样的 entitlements）；</li>
-</ol>
-<h2 id="写代码"><a href="#写代码" class="headerlink" title="写代码"></a>写代码</h2><ol>
-<li>客户端代码</li>
-<li>服务端代码</li>
-</ol>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://forums.developer.apple.com/message/75928#75928" target="_blank" rel="external">Debugging Entitlement</a></p>
+        <h2 id="Socket-是什么-？"><a href="#Socket-是什么-？" class="headerlink" title="Socket 是什么 ？"></a>Socket 是什么 ？</h2><p>1、 socket套接字：<br>     socket起源于Unix，而Unix/Linux基本哲学之一就是“一切皆文件”，都可以用“打开open –&gt; 读写write/read –&gt; 关闭close”模式来操作。Socket就是该模式的一个实现，        socket即是一种特殊的文件，一些socket函数就是对其进行的操作（读/写IO、打开、关闭）.<br>     说白了Socket是应用层与TCP/IP协议族通信的中间软件抽象层，它是一组接口。在设计模式中，Socket其实就是一个门面模式，它把复杂的TCP/IP协议族隐藏在Socket接口后面，对用户来说，一组简单的接口就是全部，让Socket去组织数据，以符合指定的协议。</p>
+<pre><code>注意：其实socket也没有层的概念，它只是一个facade设计模式的应用，让编程变的更简单。是一个软件抽象层。在网络编程中，我们大量用的都是通过socket实现的。
+</code></pre><p>2、套接字描述符<br>          其实就是一个整数，我们最熟悉的句柄是0、1、2三个，0是标准输入，1是标准输出，2是标准错误输出。0、1、2是整数表示的，对应的FILE *结构的表示就是stdin、stdout、stderr</p>
+<p>套接字API最初是作为UNIX操作系统的一部分而开发的，所以套接字API与系统的其他I/O设备集成在一起。特别是，当应用程序要为因特网通信而创建一个套接字（socket）时，操作系统就返回一个小整数作为描述符（descriptor）来标识这个套接字。然后，应用程序以该描述符作为传递参数，通过调用函数来完成某种操作（例如通过网络传送数据或接收输入的数据）。</p>
+<p>在许多操作系统中，套接字描述符和其他I/O描述符是集成在一起的，所以应用程序可以对文件进行套接字I/O或I/O读/写操作。</p>
+<p>当应用程序要创建一个套接字时，操作系统就返回一个小整数作为描述符，应用程序则使用这个描述符来引用该套接字需要I/O请求的应用程序请求操作系统打开一个文件。操作系统就创建一个文件描述符提供给应用程序访问文件。从应用程序的角度看，文件描述符是一个整数，应用程序可以用它来读写文件。下图显示，操作系统如何把文件描述符实现为一个指针数组，这些指针指向内部数据结构。</p>
+<p>对于每个程序系统都有一张单独的表。精确地讲，系统为每个运行的进程维护一张单独的文件描述符表。当进程打开一个文件时，系统把一个指向此文件内部数据结构的指针写入文件描述符表，并把该表的索引值返回给调用者 。应用程序只需记住这个描述符，并在以后操作该文件时使用它。操作系统把该描述符作为索引访问进程描述符表，通过指针找到保存该文件所有的信息的数据结构。</p>
+<pre><code>针对套接字的系统数据结构：
+</code></pre><p>   1）、套接字API里有个函数socket，它就是用来创建一个套接字。套接字设计的总体思路是，单个系统调用就可以创建任何套接字，因为套接字是相当笼统的。一旦套接字创建后，应用程序还需要调用其他函数来指定具体细节。例如调用socket将创建一个新的描述符条目：</p>
+<p>   2）、虽然套接字的内部数据结构包含很多字段，但是系统创建套接字后，大多数字字段没有填写。应用程序创建套接字后在该套接字可以使用之前，必须调用其他的过程来填充这些字段。</p>
+<p>3、文件描述符和文件指针的区别：</p>
+<p>文件描述符：在linux系统中打开文件就会获得文件描述符，它是个很小的正整数。每个进程在PCB（Process Control Block）中保存着一份文件描述符表，文件描述符就是这个表的索引，每个表项都有一个指向已打开文件的指针。</p>
+<p>文件指针：C语言中使用文件指针做为I/O的句柄。文件指针指向进程用户区中的一个被称为FILE结构的数据结构。FILE结构包括一个缓冲区和一个文件描述符。而文件描述符是文件描述符表的一个索引，因此从某种意义上说文件指针就是句柄的句柄（在Windows系统上，文件描述符被称作文件句柄）。</p>
+<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><h2 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h2><p>引用:</p>
+<ul>
+<li><a href="http://blog.csdn.net/hguisu/article/details/7445768/" target="_blank" rel="external">Linux的SOCKET编程详解</a></li>
+<li><a href="https://github.com/shineyr/Socket/tree/master/tcp_socket" target="_blank" rel="external">代码</a></li>
+</ul>
 
       
     </div>
@@ -408,8 +373,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/25/2016-01-25-搭建Markdown个人站点/" rel="next" title="使用Jekyll搭建Markdown个人站点">
-                <i class="fa fa-chevron-left"></i> 使用Jekyll搭建Markdown个人站点
+              <a href="/2016/05/26/找到静态库里占用包体积的罪魁祸首/" rel="next" title="找到静态库里占用包体积的罪魁祸首">
+                <i class="fa fa-chevron-left"></i> 找到静态库里占用包体积的罪魁祸首
               </a>
             
           </div>
@@ -418,8 +383,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/05/2016-03-05-在_mac_上使用_jenkins_搭建_ios_持续集成环境/" rel="prev" title="在 Mac 上使用 Jenkins 搭建 iOS 持续集成环境">
-                在 Mac 上使用 Jenkins 搭建 iOS 持续集成环境 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/27/日本路测/" rel="prev" title="“日本路测”">
+                “日本路测” <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -469,10 +434,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table Des Matières
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Ensemble
           </li>
         </ul>
       
@@ -489,7 +454,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">13</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">articles</span>
             </a>
           </div>
 
@@ -497,7 +462,7 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
@@ -533,7 +498,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Network-Extension-实现私有-VPN-协议"><span class="nav-number">1.</span> <span class="nav-text">Network Extension 实现私有 VPN 协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#申请-entitlements"><span class="nav-number">1.2.</span> <span class="nav-text">申请 entitlements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写代码"><span class="nav-number">1.3.</span> <span class="nav-text">写代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">1.4.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Socket-是什么-？"><span class="nav-number">1.</span> <span class="nav-text">Socket 是什么 ？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端"><span class="nav-number">1.1.</span> <span class="nav-text">服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端"><span class="nav-number">1.2.</span> <span class="nav-text">客户端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用案例"><span class="nav-number">2.</span> <span class="nav-text">使用案例</span></a></li></ol></div>
             
 
           </div>
@@ -563,11 +528,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Theme -
+  Thème -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>

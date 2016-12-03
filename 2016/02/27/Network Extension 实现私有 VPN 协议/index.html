@@ -84,46 +84,55 @@
 
 
 
-<meta name="description" content="目录
-原理
-工程配置
-检查和测试
+<meta name="description" content="Network Extension 实现私有 VPN 协议目录
+申请 entitlements；
+写代码；
 
-原理Xcode 默认设置打包时，会为每种架构构建交叉编译可执行文件，架构包括：arm64、armv7、armv7s、armv6、i386、x86_64，但实际上，iOS 设备并没有这么架构，减小包体积可以从优化打包时的架构集入手。
-armv7 是 iphone5 之前的设备指令集架构；
-armv7s 是 iphone5、iphone 5s 的指令集架构；
-arm">
+申请 entitlements
+向 Apple 申请 Network Extension 的 entitlements；
+配置 entitlements
+注意事项（保证应用和 Extension 有同样的 entitlements）；
+
+写代码
+客户端代码
+服务端代码
+
+参考文献Debug">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode 如何减小 66% 的包体积">
-<meta property="og:url" content="http://yoursite.com/2016/03/17/2016-03-17-Xcode_缩小静态文件包体积/index.html">
+<meta property="og:title" content="Network Extension 实现私有 VPN 协议">
+<meta property="og:url" content="http://yoursite.com/2016/02/27/Network Extension 实现私有 VPN 协议/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目录
-原理
-工程配置
-检查和测试
+<meta property="og:description" content="Network Extension 实现私有 VPN 协议目录
+申请 entitlements；
+写代码；
 
-原理Xcode 默认设置打包时，会为每种架构构建交叉编译可执行文件，架构包括：arm64、armv7、armv7s、armv6、i386、x86_64，但实际上，iOS 设备并没有这么架构，减小包体积可以从优化打包时的架构集入手。
-armv7 是 iphone5 之前的设备指令集架构；
-armv7s 是 iphone5、iphone 5s 的指令集架构；
-arm">
-<meta property="og:image" content="http://yoursite.com/images/apple/valid_architectures.png">
-<meta property="og:image" content="http://yoursite.com/images/apple/build_active_architectures_only.png">
-<meta property="og:image" content="http://yoursite.com/images/apple/strip_debug_symbols_during_copy.png">
-<meta property="og:image" content="http://yoursite.com/images/apple/generate_debug_symbols.png">
-<meta property="og:image" content="http://yoursite.com/images/apple/level_of_debug_symbols.png">
-<meta property="og:updated_time" content="2016-03-18T14:56:31.000Z">
+申请 entitlements
+向 Apple 申请 Network Extension 的 entitlements；
+配置 entitlements
+注意事项（保证应用和 Extension 有同样的 entitlements）；
+
+写代码
+客户端代码
+服务端代码
+
+参考文献Debug">
+<meta property="og:updated_time" content="2016-12-03T06:46:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode 如何减小 66% 的包体积">
-<meta name="twitter:description" content="目录
-原理
-工程配置
-检查和测试
+<meta name="twitter:title" content="Network Extension 实现私有 VPN 协议">
+<meta name="twitter:description" content="Network Extension 实现私有 VPN 协议目录
+申请 entitlements；
+写代码；
 
-原理Xcode 默认设置打包时，会为每种架构构建交叉编译可执行文件，架构包括：arm64、armv7、armv7s、armv6、i386、x86_64，但实际上，iOS 设备并没有这么架构，减小包体积可以从优化打包时的架构集入手。
-armv7 是 iphone5 之前的设备指令集架构；
-armv7s 是 iphone5、iphone 5s 的指令集架构；
-arm">
-<meta name="twitter:image" content="http://yoursite.com/images/apple/valid_architectures.png">
+申请 entitlements
+向 Apple 申请 Network Extension 的 entitlements；
+配置 entitlements
+注意事项（保证应用和 Extension 有同样的 entitlements）；
+
+写代码
+客户端代码
+服务端代码
+
+参考文献Debug">
 
 
 
@@ -151,13 +160,13 @@ arm">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/03/17/2016-03-17-Xcode_缩小静态文件包体积/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/02/27/Network Extension 实现私有 VPN 协议/"/>
 
 
 
 
 
-  <title> Xcode 如何减小 66% 的包体积 | Hexo </title>
+  <title> Network Extension 实现私有 VPN 协议 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -215,7 +224,7 @@ arm">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -225,7 +234,7 @@ arm">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -268,7 +277,7 @@ arm">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/17/2016-03-17-Xcode_缩小静态文件包体积/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/27/Network Extension 实现私有 VPN 协议/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="John Doe">
@@ -292,7 +301,7 @@ arm">
             
             
               
-                Xcode 如何减小 66% 的包体积
+                Network Extension 实现私有 VPN 协议
               
             
           </h1>
@@ -304,9 +313,9 @@ arm">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-03-17T16:10:08+08:00">
-                2016-03-17
+              <span class="post-meta-item-text">Posté le</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-27T17:34:08+08:00">
+                2016-02-27
               </time>
             
 
@@ -321,11 +330,11 @@ arm">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ubuntu/" itemprop="url" rel="index">
-                    <span itemprop="name">ubuntu</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -359,56 +368,20 @@ arm">
       
 
       
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#原理">原理</a></li>
-<li><a href="#工程配置">工程配置</a></li>
-<li><a href="#检查和测试">检查和测试</a></li>
-</ul>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a><span id="原理">原理</span></h2><p><em>Xcode 默认设置打包时，会为每种架构构建交叉编译可执行文件，架构包括：arm64、armv7、armv7s、armv6、i386、x86_64，但实际上，iOS 设备并没有这么架构，减小包体积可以从优化打包时的架构集入手。</em></p>
-<pre><code>armv7 是 iphone5 之前的设备指令集架构；
-armv7s 是 iphone5、iphone 5s 的指令集架构；
-arm64 是 iphone6、iphone 6plus 的指令集架构；
-i386 以及 x86_64 是 MAC 的指令集架构；
-</code></pre><p><em>Xcode 编译过程中不仅仅产生目标架构的二进制文件，还会有些中间产物，这些中间产物也会被打包进二进制文件，如何让这些中间产物不被打包到二进制文件，也是一个减小包体积的手段。</em></p>
-<p>看看 Xcode 里相关的设置项的作用 ( <a href="https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html" target="_blank" rel="external">点击这里</a> 查看官方文档)：</p>
-<p><strong>Valid Architectures （VALID_ARCHS）</strong></p>
-<p><img src="/images/apple/valid_architectures.png" alt="image"></p>
-<blockquote>
-<p>A space-separated list of architectures for which the target should actually be built. For each target, this list is intersected with the list specified in ‘Architectures’, and the resulting set is built. This allows individual targets to “opt out” of building for particular architectures. If the resulting set of architectures is empty, no executable will be produced. [VALID_ARCHS]</p>
-</blockquote>
-<p>一个用空格分割的将被真正编译的架构列表。对于每个 target，会用这个列表里的指令集架构交叉构建。这会允许每个 target 编译特殊的架构。如果架构集列表是空的，将不会产出可执行文件。</p>
-<p><strong>Build Active Architecture Only （ONLY_ACTIVE_ARCH）</strong></p>
-<p><img src="/images/apple/build_active_architectures_only.png" alt="image"></p>
-<blockquote>
-<p>When checked, only the active architecture is built for faster debugging turnaround</p>
-</blockquote>
-<p>如果是 YES，为了更快的调试，仅仅 active 架构会被构建。</p>
-<p><strong>Strip Debug Symbols During Copy（COPY_PHASE_STRIP）</strong></p>
-<p><img src="/images/apple/strip_debug_symbols_during_copy.png" alt="image"></p>
-<blockquote>
-<p>Activating this setting causes binary files which are copied during the build (e.g., in a Copy Bundle Resources or Copy Files build phase) to be stripped of debugging symbols.  It does not cause the linked product of a target to be stripped (use Strip Linked Product for that). [COPY_PHASE_STRIP]</p>
-</blockquote>
-<p>激活这个设置会导致编译过程中被复制的二进制文件（比如复制的资源文件和编译剪短的复制文件）跳过 debugging symbols。这不会导致链接到 target 的 product 被跳过。</p>
-<p><strong>Generate Debug Symbols （GCC_GENERATE_DEBUGGING_SYMBOLS）</strong></p>
-<p><img src="/images/apple/generate_debug_symbols.png" alt="image"></p>
-<p>开启或关闭生成 debug symbols。当这个开关被打开，等级详情将会被 “Level of Debug Symbols” 这个设置所控制。</p>
-<p><img src="/images/apple/level_of_debug_symbols.png" alt="image"></p>
-<p><a href="http://bdunagan.com/2010/05/15/symbolification-shipping-symbols/" target="_blank" rel="external">点击查看</a> 相关文章</p>
-<h2 id="工程配置"><a href="#工程配置" class="headerlink" title="工程配置"></a><span id="工程配置">工程配置</span></h2><ul>
-<li><code>VALID_ARCHS</code> 设置为 <code>arm64 armv7</code>.</li>
-<li><code>ONLY_ACTIVE_ARCH</code> 设置为 <code>YES</code>.</li>
-<li><code>COPY_PHASE_STRIP</code> 设置为 <code>YES</code>.</li>
-<li><code>GCC_GENERATE_DEBUGGING_SYMBOLS</code> 设置为 <code>NO</code>.</li>
-</ul>
-<h2 id="检查和测试"><a href="#检查和测试" class="headerlink" title="检查和测试"></a><span id="检查和测试">检查和测试</span></h2><ul>
-<li><p>检查更改设置后的包大小。更改设置之前，<code>Release-iphoneos/*.a</code> 文件大小是 56.9MB，更改设置之后，文件大小是 29.1MB，包体积减小了 66%。</p>
-</li>
-<li><p>在不同的设备上运行打包后的程序，是否能正常运行。分别在下面几种机型上测试，看能否正常运行，以及运行速度。 </p>
-<pre><code>iPhone 4 | iPhone 4s armv7 指令集架构
-iPhone 5 | iPhone 5s armv7s 指令集架构
-iPhone 6 | iPhone 6 plus arm64 指令集架构
-</code></pre></li>
-</ul>
+        <h1 id="Network-Extension-实现私有-VPN-协议"><a href="#Network-Extension-实现私有-VPN-协议" class="headerlink" title="Network Extension 实现私有 VPN 协议"></a>Network Extension 实现私有 VPN 协议</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li>申请 entitlements；</li>
+<li>写代码；</li>
+</ol>
+<h2 id="申请-entitlements"><a href="#申请-entitlements" class="headerlink" title="申请 entitlements"></a>申请 entitlements</h2><ol>
+<li>向 Apple 申请 Network Extension 的 entitlements；</li>
+<li>配置 entitlements</li>
+<li>注意事项（保证应用和 Extension 有同样的 entitlements）；</li>
+</ol>
+<h2 id="写代码"><a href="#写代码" class="headerlink" title="写代码"></a>写代码</h2><ol>
+<li>客户端代码</li>
+<li>服务端代码</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://forums.developer.apple.com/message/75928#75928" target="_blank" rel="external">Debugging Entitlement</a></p>
 
       
     </div>
@@ -435,8 +408,8 @@ iPhone 6 | iPhone 6 plus arm64 指令集架构
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/05/2016-03-05-在_mac_上使用_jenkins_搭建_ios_持续集成环境/" rel="next" title="在 Mac 上使用 Jenkins 搭建 iOS 持续集成环境">
-                <i class="fa fa-chevron-left"></i> 在 Mac 上使用 Jenkins 搭建 iOS 持续集成环境
+              <a href="/2016/01/25/搭建Markdown个人站点/" rel="next" title="使用Jekyll搭建Markdown个人站点">
+                <i class="fa fa-chevron-left"></i> 使用Jekyll搭建Markdown个人站点
               </a>
             
           </div>
@@ -445,8 +418,8 @@ iPhone 6 | iPhone 6 plus arm64 指令集架构
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/17/2016-03-16-在亚马逊云上使用_ubuntu_系统实例/" rel="prev" title="在亚马逊云上使用 Ubuntu 系统实例">
-                在亚马逊云上使用 Ubuntu 系统实例 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/05/在_mac_上使用_jenkins_搭建_ios_持续集成环境/" rel="prev" title="在 Mac 上使用 Jenkins 搭建 iOS 持续集成环境">
+                在 Mac 上使用 Jenkins 搭建 iOS 持续集成环境 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -496,10 +469,10 @@ iPhone 6 | iPhone 6 plus arm64 指令集架构
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table Des Matières
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Ensemble
           </li>
         </ul>
       
@@ -516,7 +489,7 @@ iPhone 6 | iPhone 6 plus arm64 指令集架构
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">13</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">articles</span>
             </a>
           </div>
 
@@ -524,7 +497,7 @@ iPhone 6 | iPhone 6 plus arm64 指令集架构
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
@@ -560,7 +533,7 @@ iPhone 6 | iPhone 6 plus arm64 指令集架构
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工程配置"><span class="nav-number">3.</span> <span class="nav-text">工程配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查和测试"><span class="nav-number">4.</span> <span class="nav-text">检查和测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Network-Extension-实现私有-VPN-协议"><span class="nav-number">1.</span> <span class="nav-text">Network Extension 实现私有 VPN 协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#申请-entitlements"><span class="nav-number">1.2.</span> <span class="nav-text">申请 entitlements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写代码"><span class="nav-number">1.3.</span> <span class="nav-text">写代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">1.4.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -590,11 +563,11 @@ iPhone 6 | iPhone 6 plus arm64 指令集架构
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Theme -
+  Thème -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
